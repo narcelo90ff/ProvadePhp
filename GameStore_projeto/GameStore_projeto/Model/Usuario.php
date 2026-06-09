@@ -14,7 +14,7 @@ class Usuario
 {
     $pdo = Banco::conectar();
 
-    // 🔥 VERIFICAR DUPLICIDADE (EMAIL OU CPF)
+    
     $verifica = $pdo->prepare("
         SELECT id
         FROM usuarios
@@ -28,17 +28,16 @@ class Usuario
 
     if ($verifica->fetch())
     {
-        // já existe usuário
+        
         return false;
     }
 
-    // criptografar senha
+    
     $senhaHash = password_hash(
         $senha,
         PASSWORD_DEFAULT
     );
 
-    // inserir usuário
     $sql = $pdo->prepare("
         INSERT INTO usuarios
         (
