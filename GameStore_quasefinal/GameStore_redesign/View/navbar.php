@@ -2,10 +2,8 @@
 
 <nav class="gs-nav">
 
-    <!-- LOGO -->
     <a href="index.php?p=home" class="gs-brand">🎮 GameStore</a>
 
-    <!-- MENU PRINCIPAL -->
     <div class="nav-center">
         <a href="index.php?p=home">Home</a>
         <a href="index.php?p=catalogo">Catálogo</a>
@@ -13,7 +11,6 @@
         <a href="index.php?p=sobre">Sobre</a>
     </div>
 
-    <!-- ÁREA USUÁRIO -->
     <div class="nav-user">
 
     <?php if(isset($_SESSION['usuario'])): ?>
@@ -21,7 +18,6 @@
         <a href="index.php?p=carrinho">🛒 Carrinho</a>
         <a href="index.php?p=perfil">Perfil</a>
 
-        <!-- 🔥 AQUI ENTRA O DASHBOARD -->
         <?php if($_SESSION['usuario']['tipo'] === 'admin'): ?>
             <a href="index.php?p=dashboard">⚙️ Dashboard</a>
         <?php endif; ?>
