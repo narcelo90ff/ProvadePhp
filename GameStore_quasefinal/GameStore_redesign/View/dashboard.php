@@ -33,7 +33,6 @@ require_once 'Model/Categoria.php';
 
 </div>
 
-<!-- BLOCO DE BOAS-VINDAS -->
 <div class="card admin-panel">
 
     <h3>⚙️ Painel Administrativo</h3>
@@ -57,7 +56,6 @@ require_once 'Model/Categoria.php';
 
 </div>
 
-<!-- ÚLTIMO LOGIN -->
 <?php if(isset($_COOKIE['ultimo_login'])): ?>
     <div class="card">
 
